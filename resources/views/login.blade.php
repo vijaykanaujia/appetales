@@ -44,5 +44,5 @@
     #login {
         height: 100vh;
     }
-    </style>
+</style>
 @endsection

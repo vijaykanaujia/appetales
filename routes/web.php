@@ -18,6 +18,9 @@ Route::get('/', function () {
     return view('login');
 });
 Route::post('login', [AppetaleController::class, 'login'])->name('login');
+Route::get('logout', [AppetaleController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth'])->group(function () {
+    Route::get('dashboard', [AppetaleController::class, 'dashboard'])->name('dashboard');
+    Route::post('user/update', [AppetaleController::class, 'updateUserInfo'])->name('user.update');
 });
